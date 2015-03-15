@@ -3,7 +3,7 @@
 # VERSION 0.1
 
 FROM centos
-MAINTAINER Dave Goehrig dave@dloh.org
+MAINTAINER Luc De Brouwer info@lucdebrouwer.nl
 
 # We need the developer tools to build the occasional add on or two
 RUN yum -y groupinstall "Development Tools"
