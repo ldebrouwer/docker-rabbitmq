@@ -8,10 +8,10 @@ sleep 10
 if [ "$CONTAINER_SERVER" == "$MASTER" ]; then
 	echo "Running as master"
 else
-	echo "Joining cluster at $CLUSTER"
+	echo "Joining cluster at $MASTER"
 	rabbitmqctl stop_app
 	rabbitmqctl reset
-	rabbitmqctl join_cluster $CLUSTER
+	rabbitmqctl join_cluster rabbit@$MASTER
 	rabbitmqctl start_app
 fi
 
